@@ -56,6 +56,15 @@ p {
     line-height: 1.375;
 }
 
+strong {
+    font-weight: 700;
+}
+
+address,
+em {
+    font-style: normal;
+}
+
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
