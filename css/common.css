@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.cs');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
 
 * {
@@ -13,6 +13,15 @@
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
 }
 
 ul,
@@ -40,6 +49,20 @@ body {
     ;
     word-break: keep-all;
     line-height: 1;
+    color: #444;
+}
+
+p {
+    line-height: 1.375;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 
 .inner {
