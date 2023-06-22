@@ -45,13 +45,20 @@ $(function () {
 
     const ItmSlide = new Swiper('.itm_slide', {
         loop: true,
-        slidesPerView: 2,
-        spaceBetween: 400,
+        slidesPerView: 1,
+        spaceBetween: 100,
         speed: 900,
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
         },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 400,
+            }
+        }
     });
 
     $('.MainItm .arrows .left').on('click', function () {
@@ -65,7 +72,20 @@ $(function () {
         ItmSlide.slideNext();
     });
 
+    $('.mobile_btn').on('click', function () {
+        $(this).toggleClass('on');
+        $('.Gnb').toggleClass('on');
 
+    });
 
+    $('.Gnb>ul>li>a').on('click', function (e) {
+        e.preventDefault();
+        $(this).next().stop().slideDown();
+        $(this).parent().siblings().find('.sub').slideUp();
+    });
+
+    $(window).on('resize', function () {
+        $('.Gnb .sub').removeAttr('style');
+    })
 
 })
