@@ -668,6 +668,33 @@
     border-radius: 50%;
 }
 
+.Footer .site_map {
+    margin: 0 auto 50px auto;
+}
+
+.Footer .site_map>ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+
+}
+
+
+.Footer .site_map>ul>li>a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+
+.Footer .site_map ul ul a {
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+    white-space: nowrap;
+}
+
 
 .mobile_btn {
     display: none;
@@ -984,5 +1011,9 @@
         display: none;
     }
 
+
+    .Footer .site_map {
+        display: none;
+    }
 
 }

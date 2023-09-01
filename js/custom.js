@@ -20,7 +20,7 @@ $(function () {
         },
         on: {
             slideChangeTransitionStart: function () {
-                $('.MainVisual .dots li')
+                $('.Main_visual .dots li')
                     .eq(this.realIndex)
                     .addClass('on')
                     .siblings()
@@ -29,15 +29,15 @@ $(function () {
         }
     });
 
-    $('.MainVisual .arrows .left').on('click', function () {
+    $('.Main_visual .arrows .left').on('click', function () {
         MainSlide.slidePrev();
     });
-    $('.MainVisual .arrows .right').on('click', function () {
+    $('.Main_visual .arrows .right').on('click', function () {
         MainSlide.slideNext();
     });
 
 
-    $('.MainVisual .dots li').on('click', function () {
+    $('.Main_visual .dots li').on('click', function () {
         const idx = $(this).index();
         $(this).addClass('on').siblings().removeClass('on')
         MainSlide.slideTo(idx);
@@ -79,9 +79,16 @@ $(function () {
     });
 
     $('.Gnb>ul>li>a').on('click', function (e) {
-        e.preventDefault();
+        if ($('.Gnb').hasClass('on')) {
+            e.preventDefault();
+        }
+
         $(this).next().stop().slideDown();
         $(this).parent().siblings().find('.sub').slideUp();
+    });
+
+    $('.Gnb').on('wheel touchmove', function (e) {
+        e.preventDefault();
     });
 
     $(window).on('resize', function () {
