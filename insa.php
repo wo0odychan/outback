@@ -1,5 +1,5 @@
 <? include 'head.php'; ?>
 <div id="sub">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta odit ipsum numquam!
+    현재 페이지 준비 중.
 </div>
 <? include 'foot.php'; ?>

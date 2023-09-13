@@ -884,12 +884,13 @@
     }
 
     .Main_visual .arrows {
-        top: 30%;
+        top: auto;
+        bottom: 25%;
     }
 
     .Main_visual .dots {
         gap: 0;
-        bottom: 50%;
+        bottom: 20%;
 
     }
 
